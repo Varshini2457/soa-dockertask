@@ -1,0 +1,5 @@
+package com.klef.soa.exam.service;
+
+public interface BikeRentalService {
+
+}

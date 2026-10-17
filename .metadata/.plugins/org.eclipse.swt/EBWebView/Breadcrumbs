@@ -1,0 +1,58 @@
+1:05:23 Microsoft.Shutdown.TabStripModel.CloseAllTabs
+1:05:23 Microsoft.Shutdown.TabStripModel.CloseTabs
+1:05:23 Microsoft.Shutdown.TabStripModel.CloseTabs_EdgeBeforeClosingAllTabs
+1:05:23 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl
+1:05:23 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_TabClosable
+1:05:23 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosingAll
+1:05:23 Microsoft.Shutdown.TabStripModel.CloseWebContentses
+1:05:23 Microsoft.Shutdown.TabStripModel.CloseWebContentses_FastShutdown
+1:05:23 Tab14 RenderProcessGone
+1:05:23 Microsoft.UnloadController.ClearUnloadState
+1:05:23 Microsoft.Shutdown.TabStripModel.RunUnloadListenerBeforeClosing_false
+1:05:23 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosedAll
+1:05:23 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+1:05:23 Microsoft.UnloadController.ClearUnloadState
+1:05:23 Browser14 Close Tab14 at 0
+1:05:23 Tab14 WebContentsDestroyed
+1:05:23 Microsoft.Shutdown.OnWindowClosing
+1:05:23 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+1:05:23 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+1:05:23 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+1:05:23 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+1:05:23 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+1:05:23 Widget Closed: WebView2MinimalFrame
+1:05:23 Microsoft.UnloadController.TabStripEmpty
+1:05:23 Widget Closed: WebView2MinimalFrame
+1:05:23 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+1:05:23 Microsoft.Shutdown.OnWindowClosing
+1:05:23 Microsoft.Shutdown.OnWindowClosing_DeleteScheduled
+1:05:23 Microsoft.Browser_Removed
+1:05:23 Widget Closed: WebView2MinimalFrame
+1:12:06 Tab12 StartNav147 #typed
+1:12:06 Tab12 FinishNav147
+1:12:06 Tab12 PageLoad
+1:13:02 Tab12 StartNav148 #typed
+1:13:02 Tab12 FinishNav148
+1:13:02 Tab12 PageLoad
+1:13:22 Tab29 StartNav149 #typed
+1:13:22 Tab29 FinishNav149
+1:13:22 Tab29 PageLoad
+1:13:24 Tab29 StartNav150 #typed
+1:13:24 Tab29 FinishNav150
+1:13:24 Tab29 PageLoad
+1:13:31 Tab29 StartNav151 #typed
+1:13:31 Tab29 FinishNav151
+1:13:31 Tab29 PageLoad
+1:14:19 Tab29 StartNav152 #typed
+1:14:19 Tab29 FinishNav152
+1:14:19 Tab29 PageLoad
+1:14:20 Tab29 StartNav153 #typed
+1:14:20 Tab29 FinishNav153
+1:14:20 Tab29 PageLoad
+1:15:16 Tab29 StartNav154 #typed
+1:15:16 Tab29 FinishNav154
+1:15:16 Tab29 PageLoad
+1:15:16 Tab29 StartNav155 #typed
+1:15:16 Tab29 FinishNav155
+1:15:16 Tab29 PageLoad
+1:18:05 Microsoft.Shutdown.OnWindowClosing

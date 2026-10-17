@@ -1,0 +1,16 @@
+package com.klef.soa.exam.service;
+
+import java.util.List;
+
+import com.klef.soa.exam.entity.BikeRental;
+
+public interface BikeRentalService 
+{
+	
+	BikeRental add(BikeRental bike);
+	
+	List<BikeRental> displayAll();
+	
+	String delete(long id);
+
+}

@@ -1,0 +1,5 @@
+package com.klef.soa.exam.configuration;
+
+public class SwaggerConfig {
+
+}

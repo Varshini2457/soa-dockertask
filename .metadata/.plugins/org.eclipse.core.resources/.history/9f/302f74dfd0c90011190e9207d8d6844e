@@ -1,0 +1,10 @@
+package com.klef.soa.exam.service;
+
+import com.klef.soa.exam.entity.BikeRental;
+
+public interface BikeRentalService 
+{
+	
+	BikeRental add
+
+}

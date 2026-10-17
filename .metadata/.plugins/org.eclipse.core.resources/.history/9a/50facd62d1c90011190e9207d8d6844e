@@ -1,0 +1,11 @@
+package com.klef.soa.exam.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BikerentalServiceImpl 
+{
+	@Autowired
+    private BeautySalonRepository repository;
+
+}

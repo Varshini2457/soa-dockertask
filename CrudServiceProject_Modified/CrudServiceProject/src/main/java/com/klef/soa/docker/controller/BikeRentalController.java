@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.klef.soa.docker.dto.BikeRentalRequest;
 import com.klef.soa.docker.dto.BikeRentalResponse;
@@ -13,7 +14,7 @@ import com.klef.soa.docker.service.BikeRentalService;
 
 @RestController
 @RequestMapping("/bikerental")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})
+@CrossOrigin(origins = "*") 
 public class BikeRentalController {
     private final BikeRentalService service;
 

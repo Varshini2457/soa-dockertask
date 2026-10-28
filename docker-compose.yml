@@ -1,5 +1,36 @@
-
 services:
+  postgresdb:
+    image: postgres:16
+    container_name: postgresdb
+    environment:
+      POSTGRES_DB: klutaskdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d klutaskdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  backend:
+    image: varshinimulpuri/docker-backend-2400031985:latest
+    container_name: bike-rental-backend
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/klutaskdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: docker
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+    depends_on:
+      postgresdb:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   frontend:
     image: varshinimulpuri/docker-frontend-2400031985:latest
     container_name: bike-rental-frontend
@@ -7,12 +38,5 @@ services:
       - "3000:80"
     depends_on:
       - backend
-
-  backend:
-    image: varshinimulpuri/docker-backend-2400031985:latest
-    container_name: bike-rental-backend
-    ports:
-      - "8083:8083"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/exam_2400031985
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+volumes:
+  postgres_data:

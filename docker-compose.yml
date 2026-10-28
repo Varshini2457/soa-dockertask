@@ -15,8 +15,11 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
   backend:
-    image: varshinimulpuri/docker-backend-2400031985:latest
+    build:
+      context: ./CrudServiceProject_Modified/CrudServiceProject
+      dockerfile: Dockerfile
     container_name: bike-rental-backend
     ports:
       - "8083:8083"
@@ -25,18 +28,20 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/klutaskdb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: docker
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/
+      EUREKA_CLIENT_ENABLED: "false"
     depends_on:
       postgresdb:
         condition: service_healthy
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+
   frontend:
-    image: varshinimulpuri/docker-frontend-2400031985:latest
+    build:
+      context: ./Bike-Rental-Frontend/BikeRental
+      dockerfile: Dockerfile
     container_name: bike-rental-frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
+
 volumes:
   postgres_data:

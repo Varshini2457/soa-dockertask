@@ -1,0 +1,18 @@
+
+services:
+  frontend:
+    image: varshinimulpuri/docker-frontend-2400031985:latest
+    container_name: bike-rental-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  backend:
+    image: varshinimulpuri/docker-backend-2400031985:latest
+    container_name: bike-rental-backend
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/exam_2400031985
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://host.docker.internal:8761/eureka/

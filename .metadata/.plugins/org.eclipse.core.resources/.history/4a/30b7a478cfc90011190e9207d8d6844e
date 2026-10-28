@@ -1,9 +1,0 @@
-package com.klef.soa.exam.entity;
-
-import jakarta.persistence.Entity;
-
-@Entity
-@
-public class BikeRental {
-
-}
